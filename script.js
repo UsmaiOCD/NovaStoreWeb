@@ -1,5 +1,3 @@
-import { data } from './products.js';
-
 let slideIndex = 1;
 let autoSlideInterval;
 showSlides(slideIndex);
@@ -46,11 +44,6 @@ function startAutoSlide() {
 
 startAutoSlide();
 
-// Setup event listeners for slide navigation
-document.querySelectorAll('.dot').forEach((dot, index) => {
-  dot.addEventListener('click', () => currentSlide(index + 1));
-});
-
 // Dropdown menu toggle
 const dropdownToggle = document.querySelector('.dropdown i');
 const dropdownContent = document.querySelector('.dropdown-content');
@@ -67,20 +60,3 @@ document.addEventListener('click', function(event) {
     }
   }
 });
-
-function displayProducts(products) {
-  let container = document.getElementById('product-list');
-  products.forEach(product => {
-      let productHTML = `
-        <div class="product">
-          <img src="${product.image}" alt="${product.name}" />
-          <h3>${product.name}</h3>
-          <p>Giá: ${product.price}</p>
-          <a href="${product.link}" target="_blank">Xem sản phẩm</a>
-        </div>
-      `;
-      container.innerHTML += productHTML;
-    });
-  }
-
-displayProducts(data);
