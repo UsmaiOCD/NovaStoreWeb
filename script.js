@@ -46,6 +46,11 @@ function startAutoSlide() {
 
 startAutoSlide();
 
+// Setup event listeners for slide navigation
+document.querySelectorAll('.dot').forEach((dot, index) => {
+  dot.addEventListener('click', () => currentSlide(index + 1));
+});
+
 // Dropdown menu toggle
 const dropdownToggle = document.querySelector('.dropdown i');
 const dropdownContent = document.querySelector('.dropdown-content');
