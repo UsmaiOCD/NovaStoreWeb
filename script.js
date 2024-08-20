@@ -71,11 +71,11 @@ function displayProducts(products) {
           <img src="${product.image}" alt="${product.name}" />
           <h3>${product.name}</h3>
           <p>Giá: ${product.price}</p>
-          <a href="${product.link}" target="_blank">Mua ngay</a>
+          <a href="${product.link}" target="_blank">Xem sản phẩm</a>
         </div>
       `;
       container.innerHTML += productHTML;
-  });
-}
+    });
+  }
 
 displayProducts(data);
